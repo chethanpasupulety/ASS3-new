@@ -24,8 +24,7 @@ Relation* naturalJoin(Relation *r1, Relation *r2, list<string> joinattrs)
 
         }
         int ind1=i;
-        // int ind1 = find(r1->getAttrNames().begin(), r1->getAttrNames().end(), attrname) - r1->getAttrNames().begin();
-        cout<<"ind1:"<<ind1<<endl;
+        
 
          for(j=0;j<(r2->nattrs_);j++) {
             if((r2->getAttrNames())[j]==attrname) break;
@@ -35,8 +34,7 @@ Relation* naturalJoin(Relation *r1, Relation *r2, list<string> joinattrs)
 
 
 
-        // int ind2 = find(r2->getAttrNames().begin(), r2->getAttrNames().end(), attrname) - r2->getAttrNames().begin();
-        cout<<"ind2:"<<ind2<<endl;
+      
         attrind1.push_back(ind1);
         attrind2.push_back(ind2);
         attrnames.push_back(attrname);
@@ -53,7 +51,7 @@ Relation* naturalJoin(Relation *r1, Relation *r2, list<string> joinattrs)
         for(auto &name:attrnames){
             if(name!=r2AttrNames[i]) k++;
         }
-        cout<<"k="<<k<<endl;
+        
 
 
 
@@ -61,7 +59,7 @@ Relation* naturalJoin(Relation *r1, Relation *r2, list<string> joinattrs)
         if (k==(attrnames).size())
         {
             int j1=0;
-            cout<<"it worked!"<<endl;
+            
             result->addAttr(r2AttrNames[i]);
             result->addAttrInd(r1->nattrs() + j1);
             j1++;
